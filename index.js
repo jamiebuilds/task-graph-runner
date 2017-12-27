@@ -6,7 +6,7 @@ const arrayIncludes = require('array-includes');
 type Opts<Item, Result> = {
   graph: Map<Item, Array<Item>>,
   task: (item: Item) => Result,
-  force: boolean,
+  force?: boolean,
 };
 
 type Results<Item, Result> = {
@@ -78,7 +78,7 @@ function taskGraphRunner/*::<Item, Result>*/(opts /*: Opts<Item, Result> */) /*:
 
   function next() {
     let chunk = getNextChunk();
-    let promises = [];
+    let promises /*: Array<Promise<mixed>> */ = [];
 
     for (let key of chunk) {
       running.add(key);
