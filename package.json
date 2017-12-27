@@ -1,6 +1,6 @@
 {
   "name": "task-graph-runner",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Run async tasks with dependencies",
   "main": "index.js",
   "repository": "https://github.com/thejameskyle/task-graph-runner",
