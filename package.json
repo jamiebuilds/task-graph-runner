@@ -1,0 +1,38 @@
+{
+  "name": "task-graph-runner",
+  "version": "0.0.0",
+  "description": "Run async tasks with dependencies",
+  "main": "index.js",
+  "repository": "https://github.com/thejameskyle/task-graph-runner",
+  "author": "James Kyle <me@thejameskyle.com>",
+  "license": "MIT",
+  "keywords": [
+    "graph",
+    "adjacency",
+    "list",
+    "tasks",
+    "priority",
+    "priorities",
+    "sort",
+    "dependencies",
+    "topological",
+    "topo",
+    "sequencer",
+    "task",
+    "runner"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "flow": "flow status",
+    "test": "ava test.js"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "flow-bin": "^0.61.0"
+  },
+  "dependencies": {
+    "array-includes": "^3.0.3"
+  }
+}
