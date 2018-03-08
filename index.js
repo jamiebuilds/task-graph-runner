@@ -28,6 +28,10 @@ function taskGraphRunner/*::<Item, Result>*/(opts /*: Opts<Item, Result> */) /*:
     let chunk = [];
     let current = new Map();
 
+    if (!queue.size) {
+      return chunk;
+    }
+
     for (let key of queue) {
       let deps = graph.get(key) || [];
       let curr = deps.filter(dep => queue.has(dep));

@@ -13,6 +13,15 @@ function createTask(order) {
   };
 }
 
+test('empty graph', t => {
+  let graph = new Map([]);
+  let task = () => t.fails();
+  return taskGraphRunner({ graph, task }).then(res => {
+    t.is(res.safe, true);
+    t.deepEqual(Array.from(res.values), []);
+  });
+});
+
 test('graph with no dependencies', t => {
   let graph = new Map([
     ['a', []],
