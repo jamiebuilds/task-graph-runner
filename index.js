@@ -5,7 +5,7 @@ const arrayIncludes = require('array-includes');
 /*::
 type Opts<Item, Result> = {
   graph: Map<Item, Array<Item>>,
-  task: (item: Item) => Result,
+  task: (item: Item) => Promise<Result>,
   force?: boolean,
 };
 
